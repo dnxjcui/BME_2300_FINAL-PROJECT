@@ -1,0 +1,10 @@
+## General Information
+
+### `data_prep_src`
+Contains files for prepping `.csv` files into more `.mat` files, for the the purposes of this experiment and corresponding compatibility.
+>**For user purposes**, you only have to edit the paths within `main.py` that are commented for one to do so.
+
+
+### `eval_src`
+Contains files that are used for evaluating the `.mat` files. Includes a sample script for how to use FFT, as well as various scripts for performing quantitative and qualitative analysis.
+
