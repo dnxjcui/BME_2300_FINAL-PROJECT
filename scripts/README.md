@@ -6,5 +6,5 @@ Contains files for prepping `.csv` files into more `.mat` files, for the the pur
 
 
 ### eval_src
-Contains files that are used for evaluating the `.mat` files. Includes a sample script for how to use FFT, as well as various scripts for performing quantitative and qualitative analysis.
+Contains files that are used for evaluating the `.mat` files. Includes a sample script for how to use FFT, as well as various scripts (TO BE ADDED) for performing quantitative and qualitative analysis.
 
