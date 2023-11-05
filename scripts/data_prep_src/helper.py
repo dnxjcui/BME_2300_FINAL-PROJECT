@@ -1,7 +1,16 @@
+#!/usr/bin/env python
+"""
+    helper.py
+    Contain various helper function that help prep .csv files as .mat files
+
+    Author      :   Nick Cui
+    Copyright   :   2023
+    Email       :   lening.n.cui@vanderbilt.edu
+"""
 import os
-import csv
 import time
 from scipy.io import savemat
+import csv
 
 """
 Note:  Frequency in files is 200Hz. 
@@ -20,10 +29,10 @@ def _save_mat(_csv_file, _output_dir):
                     Note that all of these electrodes are based on the 10-20 system, and measure 
                     likely in microvolts. 
     Args:
-        _csv_file   :   Name of .csv file.
-        _output_dir :   Output directory.
+        @param _csv_file    :   Name of .csv file.
+        @param _output_dir  :   Output directory.
     Returns:
-        Path to newly generated .mat file.
+        @ return            :   Path to newly generated .mat file.
     """
     _time = []
     _P4 = []
@@ -45,11 +54,11 @@ def _save_mat(_csv_file, _output_dir):
             _T7.append((float)(_row[4]))
 
     _output_file_name = os.path.join(_output_dir, (_csv_file[:-4] + ".mat"))
-    _dict_mat = {"time" : _time,
-                 "P4" : _P4,
-                 "Cz" : _Cz,
-                 "F8" : _F8,
-                 "T7" : _T7}
+    _dict_mat = {"time": _time,
+                 "P4": _P4,
+                 "Cz": _Cz,
+                 "F8": _F8,
+                 "T7": _T7}
     print(_output_file_name)
     savemat(_output_file_name, _dict_mat)
     
@@ -62,12 +71,12 @@ def _target_list(_input_file):
                         returns a list.
     
     Args:
-        _input_file :   Path to .txt file
+        @param _input_file  :   Path to .txt file
     Returns:
-        Newly formed list
+        @return             :   Newly formed list
     """
     _f = open(_input_file, 'r')
-    return (_f.read().split('\n'))
+    return _f.read().split('\n')
 
 
 def run_save_mat(_base_path, _input_file, _output_dir):
@@ -76,11 +85,11 @@ def run_save_mat(_base_path, _input_file, _output_dir):
                         as output directory, and generates .mat files in said output directory.
     
     Args:
-        _base_path  :   Path to data directory containing .csv files and _input_file
-        _input_file :   Name of .txt file containing all target .csv files
-        _output_dir :   Output directory
+        @param _base_path   :   Path to data directory containing .csv files and _input_file
+        @param _input_file  :   Name of .txt file containing all target .csv files
+        @param _output_dir  :   Output directory
     Returns:
-        Nothing
+        @return             :   Nothing
     """
 
     start = time.time()

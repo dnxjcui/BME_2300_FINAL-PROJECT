@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+"""
+    main.py
+    Preps .csv files as .mat files
+
+    Author      :   Nick Cui
+    Copyright   :   2023
+    Email       :   lening.n.cui@vanderbilt.edu
+"""
+
 from helper import *
 
 if __name__ == "__main__":
