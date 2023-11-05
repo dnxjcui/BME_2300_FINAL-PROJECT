@@ -73,7 +73,7 @@ def _target_list(_input_file):
 def run_save_mat(_base_path, _input_file, _output_dir):
     """
     run_save_mat    -   Takes a .txt file with targeted .csv files separated by newlines as well 
-                        as as output directory, and generates .mat files in said output directory.
+                        as output directory, and generates .mat files in said output directory.
     
     Args:
         _base_path  :   Path to data directory containing .csv files and _input_file
@@ -84,6 +84,9 @@ def run_save_mat(_base_path, _input_file, _output_dir):
     """
 
     start = time.time()
+
+    if not os.path.exists(_output_dir):
+        os.mkdir(_output_dir)
 
     os.chdir(_base_path)
 
