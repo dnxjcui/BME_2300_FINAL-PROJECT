@@ -1,4 +1,5 @@
 ## General Information
+All the data and file naming conventions are taken from the source: https://physionet.org/content/auditory-eeg/1.0.0/
 
 ### data_prep_src
 Contains files for prepping `.csv` files into more `.mat` files, for the the purposes of this experiment and corresponding compatibility.
