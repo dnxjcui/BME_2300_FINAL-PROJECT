@@ -9,3 +9,5 @@ Contains files for prepping `.csv` files into more `.mat` files, for the purpose
 ### eval_src
 Contains files that are used for evaluating the `.mat` files. Includes a sample script for how to use FFT, as well as various scripts (TO BE ADDED) for performing quantitative and qualitative analysis.
 >Notes to self - can consider adding stochastic resonance for segments with low signal power. FFT can/should be smoothed via some sort of algorithm: I personally propose arbitrarily binning the data via a constant.
+
+Ultimately, used built-in MATLAB filter function in order to smooth the data enough to evaluate peaks. Chose to use F8 electrode simply on the basis of highest amplitude. We did not do a deep evaluation of this choice, currently an arbitrary choice.
