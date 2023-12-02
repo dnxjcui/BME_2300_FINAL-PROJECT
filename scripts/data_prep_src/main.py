@@ -12,8 +12,8 @@ from helper import *
 
 if __name__ == "__main__":
     ## Change accordingly ##
-    # data = "Filtered"
-    data = "Segmented"
+    data = "Filtered"
+    # data = "Segmented"
     ########################
 
     ## DO NOT CHANGE ##
