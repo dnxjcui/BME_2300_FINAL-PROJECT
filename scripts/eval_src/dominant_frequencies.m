@@ -34,6 +34,10 @@ T = 1/fs;               % Period
 L = length(elect) * T;  % Length of signal (s)
 t = 0:T:L;              % Time vector
 
+if (L ~= 120)
+    disp(strcat("Data not segmented properly: ", file_path));
+end
+
 fig1 = figure('visible', 'off');
 
 plot(t(1:end - 1), elect); % Plotting electrode readings against time

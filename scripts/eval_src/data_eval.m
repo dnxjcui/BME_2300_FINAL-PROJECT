@@ -19,13 +19,13 @@ amps = [];
 
 file_name = fullfile(data_path, strcat("all_", experiment, ".txt"));
 
-disp(strcat("Opening: ", file_name));
+% disp(strcat("Opening: ", file_name));
 
 txtfile = fopen(file_name);
 
 line = fgetl(txtfile);
 while ischar(line)
-    disp(strcat("Evaluating file: ", line));
+    % disp(strcat("Evaluating file: ", line));
     
     file_path = fullfile(data_path, line);
     [subject_freqs, corresponding_amps] = dominant_frequencies(file_path, electrode);
